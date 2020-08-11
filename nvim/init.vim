@@ -118,6 +118,10 @@ tnoremap <C-h> <C-w>h
 nnoremap <leader>x :x<CR>
 nnoremap <leader>w :w<CR>
 
+" remapping the esc key in insertmode and command mode
+inoremap kj <esc>
+cnoremap kj <esc>
+
 " Useful
 nnoremap H ^
 nnoremap L $
@@ -192,13 +196,13 @@ let g:airline#extensions#ale#enabled=1
 
 "  }}}
 
-	" UltiSnips {{{	
-let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']	
-let g:UltiSnipsEditSplit="vertical"	
-let g:UltiSnipsExpandTrigger = "<C-j>"	
-let g:UltiSnipsJumpForwardTrigger = "<C-j>"	
-let g:UltiSnipsJumpBackwardTrigger = "<C-k>"	
-" }}}	
+	" UltiSnips {{{
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger = "<C-j>"
+let g:UltiSnipsJumpForwardTrigger = "<C-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
+" }}}
 
 " autocmds {{{
 
