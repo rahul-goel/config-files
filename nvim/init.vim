@@ -36,16 +36,15 @@ set autoread
 set nobackup noswapfile nowb
 
 set autoindent smartindent
-
-" folding on the basis of syntax
-set foldmethod=syntax
-set foldlevelstart=20
-
 set expandtab
 set smarttab
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
+
+" folding on the basis of syntax
+set foldmethod=syntax
+set foldlevelstart=20
 
 set hlsearch
 set incsearch
@@ -192,6 +191,14 @@ let g:airline_powerline_fonts=1
 let g:airline#extensions#ale#enabled=1
 
 "  }}}
+
+	" UltiSnips {{{	
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']	
+let g:UltiSnipsEditSplit="vertical"	
+let g:UltiSnipsExpandTrigger = "<C-j>"	
+let g:UltiSnipsJumpForwardTrigger = "<C-j>"	
+let g:UltiSnipsJumpBackwardTrigger = "<C-k>"	
+" }}}	
 
 " autocmds {{{
 
