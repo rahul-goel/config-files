@@ -17,6 +17,8 @@ Plug 'tpope/vim-sleuth'
 Plug 'SirVer/ultisnips'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'easymotion/vim-easymotion'
+Plug 'shime/vim-livedown'
+Plug 'lervag/vimtex'
 
 call plug#end()
 
@@ -127,9 +129,9 @@ nnoremap H ^
 nnoremap L $
 nnoremap <leader><space> :noh<cr>
 
-" fzf
-nnoremap <F2> :Buffers<cr>
-nnoremap <leader>o :Files<cr>
+" easymotion remap
+map f <Plug>(easymotion-prefix)
+nmap s <Plug>(easymotion-bd-w)
 
 " edit init.vim
 nnoremap <leader>ev :vs ~/.config/nvim/init.vim<cr>

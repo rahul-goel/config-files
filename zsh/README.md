@@ -1,2 +1,3 @@
-.zshrc path is ~/
-Don't forget to install oh-my-zsh
+- .zshrc path is ~/
+
+- Don't forget to install oh-my-zsh
