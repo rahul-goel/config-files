@@ -438,11 +438,11 @@ keys.globalkeys = gears.table.join(
         {description = "toggle tray visibility", group = "awesome"}),
 
     -- Media keys
-    awful.key({ superkey, ctrlkey }, "period", function() awful.spawn.with_shell("playerctl next") end,
+    awful.key({ superkey, ctrlkey }, "period", function() awful.spawn.with_shell("playerctl --player=cmus,vlc,%any next") end,
         {description = "next song", group = "media"}),
-    awful.key({ superkey, ctrlkey }, "comma", function() awful.spawn.with_shell("playerctl previous") end,
+    awful.key({ superkey, ctrlkey }, "comma", function() awful.spawn.with_shell("playerctl --player=cmus,vlc,%any previous") end,
         {description = "previous song", group = "media"}),
-    awful.key({ superkey, ctrlkey }, "space", function() awful.spawn.with_shell("playerctl play-pause") end,
+    awful.key({ superkey, ctrlkey }, "space", function() awful.spawn.with_shell("playerctl --player=cmus,vlc,%any play-pause") end,
         {description = "toggle pause/play", group = "media"}),
 
     -- Max layout
