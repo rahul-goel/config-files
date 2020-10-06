@@ -436,29 +436,15 @@ keys.globalkeys = gears.table.join(
             tray_toggle()
         end,
         {description = "toggle tray visibility", group = "awesome"}),
-    -- Media keys
-    awful.key({ superkey }, "period", function() awful.spawn.with_shell("mpc -q next") end,
-        {description = "next song", group = "media"}),
-    awful.key({ superkey }, "comma", function() awful.spawn.with_shell("mpc -q prev") end,
-        {description = "previous song", group = "media"}),
--- Removing for Rofi
---    awful.key({ superkey }, "space", function() awful.spawn.with_shell("mpc -q toggle") end,
---        {description = "toggle pause/play", group = "media"}),
-    awful.key({ superkey, shiftkey }, "period", function() awful.spawn.with_shell("mpvc next") end,
-        {description = "mpv next song", group = "media"}),
-    awful.key({ superkey, shiftkey }, "comma", function() awful.spawn.with_shell("mpvc prev") end,
-        {description = "mpv previous song", group = "media"}),
-    awful.key({ superkey, shiftkey}, "space", function() awful.spawn.with_shell("mpvc toggle") end,
-        {description = "mpv toggle pause/play", group = "media"}),
 
-    awful.key({ superkey }, "F8", function() awful.spawn.with_shell("mpvc quit") end,
-        {description = "mpv quit", group = "media"}),
-    awful.key({ superkey }, "F7", function() awful.spawn.with_shell("freeze firefox") end,
-        {description = "send STOP signal to all firefox processes", group = "other"}),
-    awful.key({ superkey, shiftkey }, "F7", function() awful.spawn.with_shell("freeze -u firefox") end,
-        {description = "send CONT signal to all firefox processes", group = "other"}),
-    awful.key({ superkey }, "q", function() apps.scratchpad() end,
-        {description = "scratchpad", group = "launcher"}),
+    -- Media keys
+    awful.key({ superkey, ctrlkey }, "period", function() awful.spawn.with_shell("playerctl next") end,
+        {description = "next song", group = "media"}),
+    awful.key({ superkey, ctrlkey }, "comma", function() awful.spawn.with_shell("playerctl previous") end,
+        {description = "previous song", group = "media"}),
+    awful.key({ superkey, ctrlkey }, "space", function() awful.spawn.with_shell("playerctl play-pause") end,
+        {description = "toggle pause/play", group = "media"}),
+
     -- Max layout
     -- Single tap: Set max layout
     -- Double tap: Also disable floating for ALL visible clients in the tag
