@@ -860,6 +860,7 @@ awful.rules.rules = {
         rule_any = {
             class = {
                 "Google-chrome",
+                "firefox"
             },
             instance = {
             },
