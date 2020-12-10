@@ -140,7 +140,7 @@ awful.screen.connect_for_each_screen(function(s)
     s.dock_activator = wibox({ screen = s, height = 1, bg = "#00000000", visible = true, ontop = true})
     awful.placement.bottom(s.dock_activator)
     s.dock_activator:connect_signal("mouse::enter", function()
-        s.dock.visible = true
+        s.dock.visible = false
         if popup_timer then
             popup_timer:stop()
             popup_timer = nil

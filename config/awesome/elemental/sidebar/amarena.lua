@@ -426,29 +426,29 @@ if user.sidebar.hide_on_mouse_leave then
     end)
 end
 -- Activate sidebar by moving the mouse at the edge of the screen
-if user.sidebar.show_on_mouse_screen_edge then
-    local sidebar_activator = wibox({y = sidebar.y, width = 1, visible = true, ontop = false, opacity = 0, below = true, screen = screen.primary})
-    sidebar_activator.height = sidebar.height
-    sidebar_activator:connect_signal("mouse::enter", function ()
-        sidebar.visible = true
-    end)
-
-    if beautiful.sidebar_position == "right" then
-        awful.placement.right(sidebar_activator)
-    else
-        awful.placement.left(sidebar_activator)
-    end
-
-    sidebar_activator:buttons(
-        gears.table.join(
-            awful.button({ }, 4, function ()
-                awful.tag.viewprev()
-            end),
-            awful.button({ }, 5, function ()
-                awful.tag.viewnext()
-            end)
-    ))
-end
+-- if user.sidebar.show_on_mouse_screen_edge then
+--     local sidebar_activator = wibox({y = sidebar.y, width = 1, visible = true, ontop = false, opacity = 0, below = true, screen = screen.primary})
+--     sidebar_activator.height = sidebar.height
+--     sidebar_activator:connect_signal("mouse::enter", function ()
+--         sidebar.visible = true
+--     end)
+-- 
+--     if beautiful.sidebar_position == "right" then
+--         awful.placement.right(sidebar_activator)
+--     else
+--         awful.placement.left(sidebar_activator)
+--     end
+-- 
+--     sidebar_activator:buttons(
+--         gears.table.join(
+--             awful.button({ }, 4, function ()
+--                 awful.tag.viewprev()
+--             end),
+--             awful.button({ }, 5, function ()
+--                 awful.tag.viewnext()
+--             end)
+--     ))
+-- end
 
 
 -- Item placement

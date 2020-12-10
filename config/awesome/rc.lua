@@ -82,7 +82,7 @@ user = {
     file_manager = "kitty -1 --class files -e ranger",
     editor = "kitty -1 --class editor -e vim",
     email_client = "kitty -1 --class email -e neomutt",
-    music_client = "kitty -o font_size=12 --class music -e ncmpcpp",
+    music_client = "kitty -o font_size=12 --class music -e cmus",
 
     -- >> Web Search <<
     web_search_cmd = "xdg-open https://duckduckgo.com/?q=",
@@ -303,6 +303,9 @@ screen.connect_signal("property::geometry", set_wallpaper)
 awful.spawn.once("kitty --class music -e cmus")
 awful.spawn.once("kitty --class music -e cava")
 awful.spawn.once("kitty --class music -e lyvi")
+
+-- Start taskwarrior
+awful.spawn.once("kitty -e taskwarrior-tui")
 
 -- Tags
 -- ===================================================================
